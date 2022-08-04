@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "rollup -c",
-    "start": "rollup -cw"
+    "start": "concurrently \"rollup -cw\" \"live-server build --port=3000\""
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.1",
@@ -13,6 +13,8 @@
     "@rollup/plugin-typescript": "^8.3.4",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
+    "concurrently": "^7.3.0",
+    "live-server": "^1.2.2",
     "rollup": "^2.77.2",
     "tslib": "^2.4.0",
     "typescript": "^4.7.4"

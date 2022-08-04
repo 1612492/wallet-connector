@@ -1,11 +1,14 @@
 import * as React from "react";
 import { createRoot } from "react-dom/client";
 
-import App from "./app";
+import Main from "./main";
+
 const root = document.getElementById("root");
 
-createRoot(root).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+if (root) {
+  createRoot(root).render(
+    <React.StrictMode>
+      <Main />
+    </React.StrictMode>
+  );
+}
